@@ -43,6 +43,7 @@ def create_hmcnf_model(features_size, label_size, hierarchy, beta=0.5, dropout_r
     p_loc = layers.concatenate(local_models)
 
     labels = layers.Add()([(1-beta) * p_glob, beta * p_loc])
+    labels
 
     model = tf.keras.Model(inputs=[features], outputs=[labels])
 

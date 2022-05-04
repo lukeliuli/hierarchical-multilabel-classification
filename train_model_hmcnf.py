@@ -31,8 +31,6 @@ model = model_hmcnf.create_hmcnf_model(feature_size, label_size, hierarchy, beta
 
 model.summary()
 
-model.fit([x],
-          [y],
-          epochs=100, batch_size=256)
+model.fit([x], [y],epochs=100, batch_size=256)
 model.save("hmcnf.h5")
 
